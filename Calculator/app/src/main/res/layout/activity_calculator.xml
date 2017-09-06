@@ -20,40 +20,46 @@
             android:id="@+id/firstInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="First Input"/>
+            android:hint="First Input"
+            android:inputType="numberDecimal"/>
         <LinearLayout
             android:id="@+id/operationLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
-            <Button
+            <ToggleButton
                 android:id="@+id/operation_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"/>
-            <Button
+                android:textOff="+"
+                android:textOn="+"/>
+            <ToggleButton
                 android:id="@+id/operation_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"/>
-            <Button
+                android:textOff="-"
+                android:textOn="-"/>
+            <ToggleButton
                 android:id="@+id/operation_multi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x"/>
-            <Button
+                android:textOff="x"
+                android:textOn="x"/>
+            <ToggleButton
                 android:id="@+id/operation_div"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/"/>
+                android:textOn="/"
+                android:textOff="/"/>
         </LinearLayout>
         <EditText
             android:id="@+id/secondInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Second Input"/>
+            android:hint="Second Input"
+            android:inputType="numberDecimal"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/extraFunctionsLayout"
@@ -67,10 +73,10 @@
             android:layout_height="wrap_content"
             android:text="Extra functions:"/>
         <Button
-            android:id="@+id/operation_extra1"
+            android:id="@+id/operation_equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="func1"/>
+            android:text="Equals"/>
         <Button
             android:id="@+id/operation_extra2"
             android:layout_width="wrap_content"
