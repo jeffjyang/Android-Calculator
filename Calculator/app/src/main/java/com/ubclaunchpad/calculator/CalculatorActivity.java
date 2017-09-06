@@ -1,7 +1,6 @@
 package com.ubclaunchpad.calculator;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,12 +52,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
      * @param v
      */
 
-
-
-    // checking to see which toggle has been checked, which operation should we do
-
-
-
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -85,13 +78,27 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             }
             case R.id.operation_equals:
             {
+
+                String firstInputString = firstInput.getText().toString().trim();
+                String secondInputString = secondInput.getText().toString().trim();
+
                 // if user did not input a value
-                if (firstInput.getText().toString().trim().length() == 0) {
+                if (firstInputString.length() == 0) {
                     Toast.makeText(this, "Please give a value for the first input", Toast.LENGTH_SHORT).show();
                     break;
                 }
-                if (secondInput.getText().toString().trim().length() == 0) {
+                if (secondInputString.length() == 0) {
                     Toast.makeText(this, "Please give a value for the second input", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+                // if user only inputted a decimal point
+                if (firstInputString.length() == 1 && firstInputString.equals(".")){
+                    Toast.makeText(this, "Please input a valid number for the first input", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                if (secondInputString.length() == 1 && secondInputString.equals(".")){
+                    Toast.makeText(this, "Please input a valid number for the second input", Toast.LENGTH_SHORT).show();
                     break;
                 }
 
