@@ -56,6 +56,8 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId())
         {
+
+            // when the user selects a toggle switch (operation)
             case R.id.operation_add:
             {
                 toggleOnClick(toggleAdd);
@@ -76,6 +78,8 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 toggleOnClick(toggleDivide);
                 break;
             }
+
+            // when the user taps the equals button
             case R.id.operation_equals:
             {
 
@@ -107,6 +111,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
                 double result;
 
+                // creating the intent to be passed to ResultActivity
                 Intent intent = new Intent(this, ResultActivity.class);
 
                 intent.putExtra("input1", input1);
@@ -146,17 +151,17 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    // this unchecks all toggle swtiches
+    // this is called when a toggle switch is selected
+    public void toggleOnClick(ToggleButton toggleBut){
+        clearToggles();
+        toggleBut.setChecked(true);
+    }
+
+    // this unchecks all toggle switches
     public void clearToggles() {
         toggleAdd.setChecked(false);
         toggleSubtract.setChecked(false);
         toggleMultiply.setChecked(false);
         toggleDivide.setChecked(false);
     }
-
-    public void toggleOnClick(ToggleButton toggleBut){
-        clearToggles();
-        toggleBut.setChecked(true);
-    }
-
 }

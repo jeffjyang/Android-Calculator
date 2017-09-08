@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,11 +12,20 @@
 
     <LinearLayout
         android:id="@+id/SimpleCalcLayout"
-        android:layout_width="match_parent"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.18"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
         <EditText
             android:id="@+id/firstInput"
             android:layout_width="wrap_content"
@@ -63,11 +73,20 @@
     </LinearLayout>
     <LinearLayout
         android:id="@+id/extraFunctionsLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/SimpleCalcLayout"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.8">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,18 +95,18 @@
             android:id="@+id/operation_equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Equals"/>
+            android:text="Equals" />
         <Button
             android:id="@+id/operation_extra2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="func2"/>
+            android:text=""/>
         <Button
             android:id="@+id/operation_extra3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="func3"/>
+            android:text=""/>
 
 
     </LinearLayout>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
