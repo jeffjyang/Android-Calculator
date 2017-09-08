@@ -12,4 +12,5 @@ show off your mad skills (e.g. trig functions, hex calculator, exp functions, et
 
 # Your comments or assumptions
 - Calculation is only performed when the user taps the "EQUALS" button
-- CalculatorActivity was partially switched to a ConstraintLayout to help preserve scaling on different screen sizes.
+- CalculatorActivity was partially switched to a ConstraintLayout to help preserve scaling on
+different screen sizes.

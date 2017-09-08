@@ -42,7 +42,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         toggleMultiply.setOnClickListener(this);
         toggleDivide.setOnClickListener(this);
         buttonEquals.setOnClickListener(this);
-
     }
 
     /**
@@ -56,7 +55,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId())
         {
-
             // when the user selects a toggle switch (operation)
             case R.id.operation_add:
             {

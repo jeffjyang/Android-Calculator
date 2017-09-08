@@ -27,11 +27,9 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         double input2 = intent.getDoubleExtra("input2", 0);
 
         String operation = intent.getStringExtra("operation");
-
         double result = intent.getDoubleExtra("result", 0);
 
         resultTextView.setText(input1 + operation + input2 + "\n = " + result);
-
     }
 
     // Go back to the calculator when user taps back button
